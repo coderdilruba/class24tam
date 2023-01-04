@@ -1,0 +1,211 @@
+body a{
+    text-decoration: none;
+}
+.li-items{
+    position: relative;
+}
+.menu .new-hover:hover{
+      color: red;
+}
+.new-hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height:5%;
+    transition: .8s;
+    background-color: red;
+}
+.li-items:hover .new-hover::after{
+    width:100%;
+}
+.nav-btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color: blue;
+    background-color: aliceblue;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+.nav-btn:hover{
+    color: aliceblue;
+}
+.nav-btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: blueviolet;
+    transition: .5s;
+    border-radius: 10px;
+    z-index: -1;
+}
+.nav-btn:hover::after{
+    width: 100%;
+}
+.banner-btn{
+    color: aliceblue;
+    background-color: cornflowerblue;
+    width: 120px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.banner-content button:hover .banner-btn{
+    color: cornflowerblue;
+    outline: 1px solid cornflowerblue;
+    background-color: aliceblue;
+}
+.banner-image img{
+    width: 800px;
+    border-radius:50%;
+}
+.banner-content{
+    width: 570px;
+    margin:120px auto;
+    height: 300px;
+}
+.banner-section{
+    overflow: hidden;
+}
+
+.banner-image{
+    position: relative;
+    bottom:10%;
+    left: 21%;
+}
+.service-text h6{
+    color: blueviolet;
+}
+.service-text{
+    width: 570px;
+    height: 300px;
+
+}
+.service-text span{
+    border-bottom: 2px solid blueviolet;
+}
+/* card css */
+.card{
+    width: 300px;
+    height: 300px;
+    margin: auto -20px;
+    padding: 10px;
+    
+}
+.card:hover .card-img i{
+    background-color: white;
+    color: #5252f0;
+}
+.card:hover{
+    color: aliceblue;
+    background-color:#5252f0 ;
+}
+.card:hover .line i{
+    padding-left: 30px;
+    color: white;
+    transition: .5s;
+}
+.card:nth-last-col{
+    margin-right: 0;
+}
+.card-title{
+    margin-left: 10px;
+}
+
+.card-img i{
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+    border-radius:50% 50% 50% 0%;
+    background-color:#5252f0 ;
+    font-size: 35px;
+    line-height: 60px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.line i{
+    color: blueviolet;
+    margin-left: 10px;
+}
+
+.play-btn i{
+    font-size: 20px;
+    background-color:white;
+    text-align: center;
+    color:cornflowerblue;
+    border-radius: 50%;
+    padding: 25px;
+}
+.animation-section{
+    background: url(./video-bg.jpg) no-repeat top center;
+    background-size: cover;
+    text-align: center;
+    padding: 160px;
+    background-blend-mode:overlay;
+    background-color:#46506c;
+    color: aliceblue;
+}
+.play-animation-btn{
+    position: relative;
+}
+.play-btn::before{
+    content: "";
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border: 2px solid white;
+    top: -8px;
+    left: 47%;
+    right: 5px;
+    text-align: center;
+    border-radius: 50%;
+    animation: playbtn 2s ease-out infinite;
+
+}
+.play-btn::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid white;
+    text-align: center;
+    position: absolute;
+    top: -5px;
+    left: 47%;
+    right: 2px;
+    animation: playbtn 2s ease-out infinite;
+}
+
+@keyframes playbtn{
+   0%{
+    transform: scale(1);
+    opacity: 0;
+   }
+   25%{
+    transform: scale(1);
+    opacity: .4;
+   }
+   50%{
+    transform: scale(1.3);
+    opacity: .7;
+   }
+   75%{
+    transform: scale(1.7);
+    opacity: .9;
+   }
+   100%{
+    transform: scale(2);
+    opacity: 0;
+   }
+}
+.play-animation-btn .play-btn:hover{
+    color: aliceblue;
+}
